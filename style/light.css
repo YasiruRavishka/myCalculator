@@ -1,0 +1,25 @@
+#btnTheme {
+  background-color: #dfe0e4;
+}
+#btnTheme:hover {
+  background-color: #353b48;
+}
+.container {
+  background-color: white;
+  color: black;
+}
+.container table tr td #displayArea {
+  border-color: transparent;
+  background-color: #dcdde1;
+}
+.container table tr td button {
+  border-color: black;
+}
+#btnClear,
+#btnCal {
+  background-color: red;
+}
+#btnClear:hover,
+#btnCal:hover {
+  background-color: #c23616;
+}
