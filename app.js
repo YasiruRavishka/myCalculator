@@ -1,11 +1,12 @@
+// ------------------------------Variables------------------------------
 const lightTheme = "style/light.css";
 const darkTheme = "style/dark.css";
 const displayText = document.getElementById("displayArea");
-displayText.readOnly = true; //locked displayArea
 let resetStatus = false;
 let isDecimalNumber = false;
 let digitCount = 0;
 
+// ------------------------------Functions------------------------------
 function calc() {
   let result;
   try {
@@ -109,3 +110,7 @@ function changeTheme() {
     document.getElementById("btnTheme").innerHTML = "🌙";
   }
 }
+
+// ------------------------------Runtime------------------------------
+displayText.readOnly = true; //locked displayArea
+changeTheme();
