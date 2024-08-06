@@ -1,25 +1,35 @@
 #btnTheme {
-  background-color: #dfe0e4;
+  background-color: #eaeaea;
 }
 #btnTheme:hover {
-  background-color: #353b48;
+  background-color: #353535;
 }
 .container {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
 }
 .container table tr td #displayArea {
-  border-color: transparent;
   background-color: #dcdde1;
 }
 .container table tr td button {
-  border-color: black;
+  background-color: #eaeaea;
+  color: #000000;
+}
+.container table tr td button:hover {
+  background-color: #d2d2d2;
+}
+.container table tr td button:active {
+  background-color: #bfbfbf;
 }
 #btnClear,
 #btnCal {
-  background-color: red;
+  background-color: #ff0000;
 }
 #btnClear:hover,
 #btnCal:hover {
-  background-color: #c23616;
+  background-color: #e10000;
+}
+#btnClear:active,
+#btnCal:active {
+  background-color: #c50000;
 }

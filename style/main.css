@@ -27,6 +27,7 @@ button {
   width: 70%;
   font-size: 20px;
   border-radius: 100px;
+  border-style: none;
 }
 .container table tr td {
   padding: 5px;
@@ -47,6 +48,7 @@ button {
   width: 100px;
   height: 60px;
   font-size: 30px;
+  border-style: none;
 }
 #btnClear, #btn0{
   width: 95%;
