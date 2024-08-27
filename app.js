@@ -113,4 +113,3 @@ function changeTheme() {
 
 // ------------------------------Runtime------------------------------
 displayText.readOnly = true; //locked displayArea
-changeTheme();
