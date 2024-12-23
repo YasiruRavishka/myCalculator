@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package-win": "electron-packager . MyApp --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package-win": "electron-packager . MyCalculator --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "repository": {
     "type": "git",
