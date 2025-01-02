@@ -41,6 +41,8 @@ button {
   border-radius: 1rem;
   text-align: right;
   font-size: clamp(1.8rem, 1vw, 4.2rem);
+  overflow-x: auto;
+  white-space: nowrap;
 }
 .container table tr td {
   padding: 0.3rem;

@@ -76,6 +76,7 @@ function btnInput(value) {
       digitCount++;
       break;
   }
+  scrollToEnd();
 }
 
 function btnDelete() {
@@ -109,6 +110,10 @@ function changeTheme() {
     pageTheme.setAttribute("href", darkTheme);
     document.getElementById("btnTheme").innerHTML = "🌙";
   }
+}
+
+function scrollToEnd() {
+  displayText.scrollLeft = displayText.scrollWidth;
 }
 
 // ------------------------------Runtime------------------------------
