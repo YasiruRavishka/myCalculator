@@ -3,11 +3,15 @@ name: Deploy Static Web Page into GitHub Pages
 on:
   push:
     branches: ['main']
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -17,29 +21,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
-      # Step 2: Setup GitHub Pages Deployment
-      - name: Setup GitHub Pages Deployment
-        uses: actions/setup-pages@v2
-
-      # Step 3: Upload static content to GitHub Pages artifact
-      - name: Upload Pages Artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src'
+          path: './src/'
 
-      # Step 4: Deploy to GitHub Pages
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          branch: gh-pages  # Deployment branch
-          folder: './src'  # Directory where your built files are located
-          token: ${{ secrets.GITHUB_TOKEN }}
+        # with:
+        #   branch: gh-pages  # Deployment branch
+        #   folder: './src/'  # Directory where your built files are located
+        #   token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 5: Confirmation
+      # Confirmation
       - name: Notify Deployment Success
         run: echo "Deployment successful! Your site is live at ${{ steps.deployment.outputs.page_url }}"
